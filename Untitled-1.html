@@ -1,0 +1,190 @@
+<html>
+<head>
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .current-weather {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .current-weather .temp {
+            font-size: 48px;
+        }
+        .current-weather .temp i {
+            font-size: 48px;
+        }
+        .current-weather .details {
+            font-size: 14px;
+        }
+        .current-weather .details div {
+            margin-bottom: 5px;
+        }
+        .current-weather .weather-info {
+            text-align: right;
+        }
+        .current-weather .weather-info div {
+            font-size: 24px;
+        }
+        .current-weather .weather-info .condition {
+            font-size: 18px;
+        }
+        .forecast {
+            margin-top: 20px;
+        }
+        .forecast .tabs {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid #444;
+        }
+        .forecast .tabs div {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .forecast .tabs .active {
+            border-bottom: 2px solid #ff0;
+        }
+        .forecast .chart {
+            margin-top: 20px;
+            height: 150px;
+            background-color: #555;
+            position: relative;
+        }
+        .forecast .chart .line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ff0;
+        }
+        .forecast .chart .points {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+        .forecast .chart .points div {
+            position: relative;
+            bottom: 0;
+            width: 2px;
+            height: 2px;
+            background-color: #ff0;
+        }
+        .forecast .days {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .forecast .days .day {
+            text-align: center;
+        }
+        .forecast .days .day .icon {
+            font-size: 24px;
+        }
+        .forecast .days .day .temp {
+            font-size: 14px;
+        }
+        .forecast .days .day.active {
+            background-color: #444;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="current-weather">
+            <div class="temp">
+                <i class="fas fa-cloud-sun"></i> 32°C | °F
+            </div>
+            <div class="details">
+                <div>Precipitation: 10%</div>
+                <div>Humidity: 57%</div>
+                <div>Wind: 16 km/h</div>
+            </div>
+            <div class="weather-info">
+                <div>Weather</div>
+                <div>Monday</div>
+                <div class="condition">Partly Cloudy</div>
+            </div>
+        </div>
+        <div class="forecast">
+            <div class="tabs">
+                <div class="active">Temperature</div>
+                <div>Precipitation</div>
+                <div>Wind</div>
+            </div>
+            <div class="chart">
+                <div class="line"></div>
+                <div class="points">
+                    <div style="bottom: 29px;"></div>
+                    <div style="bottom: 32px;"></div>
+                    <div style="bottom: 31px;"></div>
+                    <div style="bottom: 27px;"></div>
+                    <div style="bottom: 25px;"></div>
+                    <div style="bottom: 23px;"></div>
+                    <div style="bottom: 23px;"></div>
+                    <div style="bottom: 23px;"></div>
+                    <div style="bottom: 22px;"></div>
+                </div>
+            </div>
+            <div class="days">
+                <div class="day active">
+                    <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+                    <div>Mon</div>
+                    <div class="temp">32° 22°</div>
+                </div>
+                <div class="day">
+                    <div class="icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+                    <div>Tue</div>
+                    <div class="temp">31° 22°</div>
+                </div>
+                <div class="day">
+                    <div class="icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+                    <div>Wed</div>
+                    <div class="temp">30° 22°</div>
+                </div>
+                <div class="day">
+                    <div class="icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+                    <div>Thu</div>
+                    <div class="temp">30° 22°</div>
+                </div>
+                <div class="day">
+                    <div class="icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+                    <div>Fri</div>
+                    <div class="temp">31° 22°</div>
+                </div>
+                <div class="day">
+                    <div class="icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+                    <div>Sat</div>
+                    <div class="temp">30° 22°</div>
+                </div>
+                <div class="day">
+                    <div class="icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+                    <div>Sun</div>
+                    <div class="temp">31° 22°</div>
+                </div>
+                <div class="day">
+                    <div class="icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+                    <div>Mon</div>
+                    <div class="temp">31° 22°</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
